@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Event</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+<h2>Add New Event</h2>
+
+<form action="/add-event" method="POST">
+  <input type="text" name="title" placeholder="Event Title" required>
+  <input type="date" name="date" required>
+  <input type="text" name="venue" placeholder="Venue" required>
+  <button>Add Event</button>
+</form>
+
+<a href="/">Back</a>
+</div>
+
+</body>
+</html>
