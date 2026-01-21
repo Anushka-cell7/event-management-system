@@ -117,6 +117,10 @@ app.get("/events", async (req, res) => {
 
   res.send(page);
 });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
+});
 
 app.get("/admin", async (req, res) => {
   if (req.session.role !== "admin") return res.send("Access Denied");
@@ -164,3 +168,4 @@ app.get("/approve/:id", async (req, res) => {
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
+
